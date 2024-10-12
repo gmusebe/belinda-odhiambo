@@ -27,11 +27,12 @@ module.exports = {
 				DEFAULT: "#473936",
 			},
 			secondary: {
-				DEFAULT: "#f2dfce",	
+				DEFAULT: "#f2dfce",
+				100: "#cea39c",
 			},
 			accent: {
 				DEFAULT: "#f19687",
-				100: "f2d5c5",
+				100: "#f2d5c5",
 			},
   			// background: 'var(--background)',
   			// foreground: 'var(--foreground)'
