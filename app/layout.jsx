@@ -3,6 +3,7 @@ import "./globals.css";
 
 // components
 import Header from "@/components/Header"
+import CursorProvider from "@/components/cursorContext"
 
 const marcellus = Marcellus({
   subsets: ["latin"],
@@ -27,8 +28,11 @@ export default function RootLayout({ children }) {
       <body
         className={`${marcellus.variable} ${montserrat.variable} overflow-x-hidden`}
       >
-        <Header />
-        {children}
+        <CursorProvider>
+          <Header />
+          {children}
+        </CursorProvider>
+
       </body>
     </html>
   );
