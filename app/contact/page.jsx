@@ -1,7 +1,8 @@
-"use client";
+"use client"
+
 import { motion } from "framer-motion";
 
-const About = () => {
+const Contact = () => {
   return (
   <motion.section
   initial={{opacity:0}}
@@ -11,11 +12,10 @@ const About = () => {
       delay: 2
     }
   }}
-  className="min-h-screen flex item-center overflow-x-hidden"
-  >
-    About Page
+  className="min-h-screen flex item-center overflow-x-hidden">
+    Contact Page
   </motion.section>
   );
 };
 
-export default About
+export default Contact

@@ -2,8 +2,11 @@ import {Marcellus, Montserrat } from "next/font/google";
 import "./globals.css";
 
 // components
-import Header from "@/components/Header"
-import CursorProvider from "@/components/cursorContext"
+import Header from "@/components/Header";
+import CursorProvider from "@/components/cursorContext";
+import Transition from "@/components/Transition";
+import PageTransition from "@/components/PageTransition";
+import About from "./about/page";
 
 const marcellus = Marcellus({
   subsets: ["latin"],
@@ -29,7 +32,9 @@ export default function RootLayout({ children }) {
         className={`${marcellus.variable} ${montserrat.variable} overflow-x-hidden`}
       >
         <CursorProvider>
+          <Transition />
           <Header />
+          <PageTransition>{children}</PageTransition>
           {children}
         </CursorProvider>
 
