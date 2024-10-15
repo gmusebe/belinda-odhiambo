@@ -25,7 +25,11 @@ const Header = () => {
         <div className="container mx-auto h-full">
           <div className="flex items-center justify-between h-full">
             {/* phone & email */}
-            <div className="flex flex-col lg:flex-row items-center h-full gap-2 xl:gap-6 w-full justify-between xl:w-auto xl:justify-normal">
+            <motion.div
+            onMouseEnter={ mouseEnterHandler }
+            onMouseLeave={mouseLeaveHandler}
+            className="flex flex-col lg:flex-row items-center h-full gap-2 xl:gap-6 w-full justify-between xl:w-auto xl:justify-normal"
+            >
               {/* phone */}
               <div className="flex items-center gap-2 text-white">
                 <FaPhoneAlt />
@@ -36,17 +40,23 @@ const Header = () => {
                 <IoMdMail />
                 <span>solutions@belshyglobal.com</span>
               </div>
-            </div>
+            </motion.div>
             {/* socials */}
-            <div className="hidden xl:block">
+            <motion.div
+            onMouseEnter={ mouseEnterHandler }
+            onMouseLeave={mouseLeaveHandler}
+            className="hidden xl:block">
               <Socials ContainerStyles="flex gap-6 text-white"/>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
       <div className="container mx-auto flex items-center justify-between px-6">
         {/* logo */}
-        <div>
+        <motion.div
+        onMouseEnter={ mouseEnterHandler }
+        onMouseLeave={mouseLeaveHandler}
+        >
           <Link href="/">
             <Image
               src="/assets/belindaLogo1.png"
@@ -56,7 +66,7 @@ const Header = () => {
               alt=""
             />
           </Link>
-        </div>
+        </motion.div>
         {/* mobile nav trigger */}
         <div
           className="xl:hidden cursor-pointer"
@@ -73,9 +83,13 @@ const Header = () => {
           <MobileNav setMobileNav={setMobileNav}/>
         </motion.div>
         {/* desktop nav */}
-        <div className="hidden xl:block">
+        <motion.div
+        onMouseEnter={ mouseEnterHandler }
+        onMouseLeave={mouseLeaveHandler} 
+        className="hidden xl:block"
+        >
           <Nav />
-        </div>
+        </motion.div>
       </div>
     </header>
   );
